@@ -25,9 +25,8 @@ jobs:
       run: ./gradlew test
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Distribute app to firebase
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FRIBASETOKEN }}
-      run: echo $FIREBASE_TOKEN
-
+    - shell: bash
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FRIBASETOKEN }}
+        run: ./gradlew build
 
