@@ -4,6 +4,8 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlinx-serialization'
 
 apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'com.google.firebase.appdistribution'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 30
@@ -38,11 +40,21 @@ android {
     }
 
     buildTypes {
+
         release {
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            firebaseAppDistribution {
+                appId="1:712463584412:android:3dad921c559583902cf159"
+                //releaseNotesFile="/path/to/releasenotes.txt"
+                testers="ali@example.com, bri@example.com, cal@example.com"
+            }
         }
     }
+
+
+
 }
 
 dependencies {
@@ -120,5 +132,12 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.12.1'
     implementation 'com.squareup.retrofit2:retrofit:2.6.4'
     implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
+
+    implementation platform('com.google.firebase:firebase-bom:26.4.0')
+
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+
+    // Declare the dependency for the Firebase SDK for Google Analytics
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 
 }
