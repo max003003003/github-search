@@ -30,6 +30,6 @@ jobs:
 #         FIREBASE_TOKEN: ${{ secrets.FRIBASETOKEN }}
 #      run: echo $FIREBASE_TOKEN
     - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ secrets.FRIBASETOKEN }}
-        run: echo "$GITHUB_CONTEXT
+      env:
+        GITHUB_CONTEXT: ${{ secrets.FRIBASETOKEN }}
+      run: echo "$GITHUB_CONTEXT
