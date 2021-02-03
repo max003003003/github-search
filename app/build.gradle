@@ -48,7 +48,7 @@ android {
             firebaseAppDistribution {
                 appId="1:712463584412:android:3dad921c559583902cf159"
                 //releaseNotesFile="/path/to/releasenotes.txt"
-                testers="ali@example.com, bri@example.com, cal@example.com"
+                testers="max003003003@gmail.com"
             }
         }
     }
