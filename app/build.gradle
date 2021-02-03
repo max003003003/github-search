@@ -5,7 +5,7 @@ apply plugin: 'kotlinx-serialization'
 
 apply plugin: 'dagger.hilt.android.plugin'
 apply plugin: 'com.google.firebase.appdistribution'
-apply plugin: 'com.google.gms.google-services'
+
 
 android {
     compileSdkVersion 30
@@ -34,19 +34,26 @@ android {
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    flavorDimensions "version"
+
 
     buildTypes {
 
-        release {
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
 
+        release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             firebaseAppDistribution {
                 appId="1:712463584412:android:3dad921c559583902cf159"
+
                 //releaseNotesFile="/path/to/releasenotes.txt"
                 testers="max003003003@gmail.com"
             }
