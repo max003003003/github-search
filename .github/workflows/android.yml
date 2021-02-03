@@ -23,5 +23,5 @@ jobs:
 
     - name: Dump GitHub context
       env:
-        FIREBASE_TOKEN: ${{ secrets.FRIBASETOKEN }}
+        FIREBASE_TOKEN: ${{ secrets.FRIBASE_TOKEN }}
       run: export $FIREBASE_TOKEN
