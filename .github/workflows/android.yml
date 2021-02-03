@@ -32,4 +32,4 @@ jobs:
     - name: Dump GitHub context
       env:
         GITHUB_CONTEXT: ${{ secrets.FRIBASETOKEN }}
-      run: echo "$GITHUB_CONTEXT
+      run: echo "$GITHUB_CONTEXT"
