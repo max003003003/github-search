@@ -1,13 +1,5 @@
 package com.example.githubsearch.view
 
-import com.example.githubsearch.GithubViewModel
-import org.junit.Test
-import org.junit.runner.RunWith
-import org.mockito.Mock
-import org.mockito.Mockito.`when`
-import org.mockito.Mockito.anyString
-import org.mockito.junit.MockitoJUnitRunner
-
 /**
  * Example local unit test, which will execute on the development machine (host).
  *

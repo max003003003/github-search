@@ -8,16 +8,12 @@ import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.githubsearch.*
+import com.example.githubsearch.viewmodel.GithubViewModel
 import dagger.hilt.android.testing.*
-import io.mockk.mockk
-import io.mockk.spyk
-import io.mockk.verify
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.koin.androidx.viewmodel.ext.android.getViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.robolectric.annotation.Config
 
 /**

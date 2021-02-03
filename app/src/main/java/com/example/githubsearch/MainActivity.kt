@@ -2,12 +2,12 @@ package com.example.githubsearch
 
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.githubsearch.model.GithubResponseBase
+import com.example.githubsearch.viewmodel.GithubViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.serialization.*
 import kotlinx.serialization.json.Json

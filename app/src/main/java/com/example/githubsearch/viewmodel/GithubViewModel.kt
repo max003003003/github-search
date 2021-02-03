@@ -1,8 +1,9 @@
-package com.example.githubsearch
+package com.example.githubsearch.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.githubsearch.retrofit.Resource
 import com.example.githubsearch.model.GithubResponseBase
 import com.example.githubsearch.repository.IGithubRepository
 import dagger.hilt.android.lifecycle.HiltViewModel

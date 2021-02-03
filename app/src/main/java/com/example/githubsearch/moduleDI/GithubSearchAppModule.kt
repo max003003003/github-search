@@ -1,4 +1,4 @@
-package com.example.githubsearch
+package com.example.githubsearch.moduleDI
 
 import com.example.githubsearch.httpclient.IHttpClient
 import com.example.githubsearch.httpclient.OkHttpClient

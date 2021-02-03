@@ -1,4 +1,4 @@
-package com.example.githubsearch
+package com.example.githubsearch.retrofit
 
 sealed class Resource<T>(
     val data: T? = null,

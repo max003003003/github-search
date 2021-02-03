@@ -1,4 +1,4 @@
-package com.example.githubsearch
+package com.example.githubsearch.moduleDI
 
 import dagger.Module
 import dagger.hilt.InstallIn
