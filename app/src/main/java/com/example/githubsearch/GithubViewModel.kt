@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.githubsearch.model.GithubResponseBase
+import com.example.githubsearch.repository.IGithubRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import retrofit2.HttpException
@@ -11,11 +12,10 @@ import javax.inject.Inject
 
 @HiltViewModel
 class GithubViewModel @Inject constructor(
-
+    val githubRepo: IGithubRepository,
 ) : ViewModel()  {
-    val api: Repository = Repository()
-    val githubLiveData: MutableLiveData<Resource<GithubResponseBase>> = MutableLiveData()
 
+    val githubLiveData: MutableLiveData<Resource<GithubResponseBase>> = MutableLiveData()
 
      fun getRepo(name: String = "docker") {
          githubLiveData.postValue(Resource.Loading())
@@ -32,7 +32,7 @@ class GithubViewModel @Inject constructor(
 
 
              withContext(Dispatchers.IO) {
-                 val response = api.getRepo(name)
+                 val response = githubRepo.getRepo(name)
 
                   githubLiveData.postValue(Resource.Success<GithubResponseBase>(response))
              }
