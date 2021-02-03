@@ -1,4 +1,4 @@
-package com.example.githubsearch.view
+package com.example.githubsearch
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.launchActivity

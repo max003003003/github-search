@@ -1,4 +1,4 @@
-package com.example.githubsearch.viewmodel
+package com.example.githubsearch
 
 import android.os.Build
 import androidx.test.espresso.matcher.ViewMatchers.assertThat
@@ -22,7 +22,7 @@ import org.robolectric.annotation.Config
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 @RunWith(MockitoJUnitRunner::class)
-class GithubViewModelTest {
+class GithubRepositoryTest {
 
     @Before
     fun setup() {
