@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:orientation="vertical"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent" android:id="@+id/linearLayout">
 
-    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/search_keyword_text_input"/>
-    <Button android:textColor="#00FFFF"
-            android:background="@color/colorAccent"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/search_button_text" android:id="@+id/search_button" />
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/hello_tv" android:text="@string/hello_text"/>
-</LinearLayout>
+    <EditText android:layout_width="256dp" android:layout_height="56dp"
+              android:id="@+id/search_keyword_text_input"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintHorizontal_bias="0.103" android:layout_marginTop="56dp"/>
+
+    <Button android:layout_width="117dp" android:layout_height="48dp"
+            android:text="@string/search_button_text" android:id="@+id/search_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/search_keyword_text_input"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/search_keyword_text_input" android:layout_marginStart="20dp"/>
+
+    <TextView android:layout_width="378dp" android:layout_height="wrap_content" android:id="@+id/hello_tv"
+              android:text="@string/hello_text"
+              android:layout_margin="128dp"
+              android:scrollbars="vertical"
+              app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="128dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
