@@ -15,5 +15,5 @@ import kotlinx.serialization.*
 data class GithubResponseBase (
 	@SerialName("total_count") val total_count : Int?,
 	@SerialName("incomplete_results") val incomplete_results : Boolean?,
-	@SerialName("items") val items : List<Items>
+	@SerialName("items") val items : List<Items>?
 )

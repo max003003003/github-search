@@ -11,6 +11,7 @@ import com.example.githubsearch.R
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.robolectric.annotation.Config
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -18,6 +19,7 @@ import org.junit.runner.RunWith
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 @RunWith(AndroidJUnit4::class)
+@Config(sdk = [Config.OLDEST_SDK])
 class MainActivityRoboElectricClassTest {
 
     private lateinit var activityScenario: ActivityScenario<MainActivity>
@@ -45,6 +47,8 @@ class MainActivityRoboElectricClassTest {
             onView(withId(R.id.search_button)).check(matches(withText(R.string.search_button_text)))
         }
     }
+
+
 
 
 }
