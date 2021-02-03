@@ -28,6 +28,6 @@ jobs:
     - name: Distribute app to firebase
       env:
         FIREBASE_TOKEN: ${{ secrets.FRIBASETOKEN }}
-      run: ./gradlew assembleRelease appDistributionUploadRelease
+      run: echo $FIREBASE_TOKEN
 
 
