@@ -6,10 +6,12 @@
                                                    android:layout_height="match_parent" android:id="@+id/linearLayout">
 
     <EditText android:layout_width="256dp" android:layout_height="56dp"
+              android:inputType="text"
               android:id="@+id/search_keyword_text_input"
               app:layout_constraintEnd_toEndOf="parent"
               app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintHorizontal_bias="0.103" android:layout_marginTop="56dp"/>
+              app:layout_constraintHorizontal_bias="0.103" android:layout_marginTop="56dp"
+              android:importantForAutofill="no" tools:ignore="LabelFor"/>
 
     <Button android:layout_width="117dp" android:layout_height="48dp"
             android:text="@string/search_button_text" android:id="@+id/search_button"

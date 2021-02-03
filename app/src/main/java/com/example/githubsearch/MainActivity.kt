@@ -6,10 +6,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.githubsearch.model.GithubResponseBase
 import com.example.githubsearch.viewmodel.GithubViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.serialization.*
+import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
 @AndroidEntryPoint
@@ -27,15 +26,14 @@ class MainActivity : AppCompatActivity() {
             val format = Json { prettyPrint = true }
 
            when(it.data){
-               null -> tv.text = "Loading"
-               else -> tv.text = format.encodeToString<GithubResponseBase>(
+               null -> tv.text = getString(R.string.LoadingMessage)
+               else -> tv.text = format.encodeToString(
                    it.data)
 
            }
 
         })
         findViewById<Button>(R.id.search_button).setOnClickListener{
-            View ->
             githubViewModel.getRepo()
         }
     }

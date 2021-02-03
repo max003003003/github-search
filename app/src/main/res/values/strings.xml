@@ -2,4 +2,5 @@
     <string name="app_name">githubSearch</string>
     <string name="hello_text">hello world</string>
     <string name="search_button_text">search repo</string>
+    <string name="LoadingMessage">Loading</string>
 </resources>
