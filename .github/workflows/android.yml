@@ -19,16 +19,6 @@ jobs:
         java-version: 1.8
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Clean build
-      run: ./gradlew clean
-    - name: Unit test
-      run: ./gradlew test
-    - name: Build with Gradle
-      run: ./gradlew build
-#    - name: Distribute app to firebase
-#      env:
-#         FIREBASE_TOKEN: ${{ secrets.FRIBASETOKEN }}
-#      run: echo $FIREBASE_TOKEN
     - name: Dump GitHub context
       env:
         GITHUB_CONTEXT: ${{ secrets.FRIBASETOKEN }}
