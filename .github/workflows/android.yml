@@ -25,8 +25,11 @@ jobs:
       run: ./gradlew test
     - name: Build with Gradle
       run: ./gradlew build
-    - shell: bash
+#    - name: Distribute app to firebase
+#      env:
+#         FIREBASE_TOKEN: ${{ secrets.FRIBASETOKEN }}
+#      run: echo $FIREBASE_TOKEN
+    - name: Dump GitHub context
         env:
-          FIREBASE_TOKEN: ${{ secrets.FRIBASETOKEN }}
-        run: ./gradlew build
-
+          GITHUB_CONTEXT: ${{ secrets.FRIBASETOKEN }}
+        run: echo "$GITHUB_CONTEXT
