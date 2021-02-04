@@ -9,7 +9,7 @@ apply plugin: 'com.google.firebase.appdistribution'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    buildToolsVersion "30.0.3"
     hilt {
         enableTransformForLocalTests = true
     }
@@ -60,8 +60,6 @@ android {
         }
     }
 
-
-
 }
 
 dependencies {
@@ -73,14 +71,13 @@ dependencies {
     def daggerVersion = '2.23.2'
     def espressoVersion = '3.3.0'
     def hamcrestVersion = '1.3'
-    def junitVersion = '4.12'
+    def junitVersion = '4.13.1'
     def mockkVersion = '1.10.0'
     def robolectricVersion = '4.5'
     def roomVersion = '2.1.0'
     def truthVersion = '1.0'
     def appCompatVersion = '1.0.2'
     def materialVersion = '1.0.0'
-    def koin_version = '2.2.2'
     def hilt_version = '2.31.2-alpha'
 
 
@@ -89,7 +86,6 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
-    implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
     implementation 'androidx.fragment:fragment-ktx:1.2.5'
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
@@ -109,6 +105,7 @@ dependencies {
     testImplementation "androidx.test.espresso:espresso-intents:$espressoVersion"
     testImplementation "com.google.truth:truth:$truthVersion"
     testImplementation 'android.arch.core:core-testing:1.1.1'
+
     // AndroidX Test - JVM testing
     testImplementation "androidx.test:core-ktx:$androidXTestCoreVersion"
     testImplementation "androidx.test.ext:junit-ktx:$androidXTestExtKotlinRunnerVersion"
@@ -142,12 +139,11 @@ dependencies {
 
     implementation platform('com.google.firebase:firebase-bom:26.4.0')
 
-    // When using the BoM, you don't specify versions in Firebase library dependencies
 
     // Declare the dependency for the Firebase SDK for Google Analytics
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
-
+    // for testing live data
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.9"
 
 }
